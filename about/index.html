@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="Nisarg Thakkar">
+
+
+    <meta name="subtitle" content="Glad you reach here.">
+
+
+
+
+<title>About Me | Nisarg&#39;s Blog</title>
+
+
+
+    <link rel="icon" href="/favicon.png">
+
+
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:300,700|Noto+Sans+JP:300,700|Noto+Sans+KR:300,700|Source+Code+Pro:400,400i,700,700i|IBM+Plex+Mono:400,400i,600,600i&display=swap" rel="stylesheet">
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo">
+            <a href="/">Nisarg&#39;s Blog</a>
+            </div>
+
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">✐  Post</a>
+                
+                    <a class="menu-item" href="/category">➭  Category</a>
+                
+                    <a class="menu-item" href="/tag">✰  Tag</a>
+                
+                    <a class="menu-item" href="/about">❐  Résumé</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">Nisarg&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">✐  Post</a>
+                
+                    <a class="menu-item" href="/category">➭  Category</a>
+                
+                    <a class="menu-item" href="/tag">✰  Tag</a>
+                
+                    <a class="menu-item" href="/about">❐  Résumé</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+
+        <div class="main">
+            
+<div class="container">
+    <div class="post-wrap page" style="text-align:center;">
+        <br>
+        <br>
+        <h1 class="post-title">❐ | About Me</h1>
+    </div>
+</div>
+
+<br>
+
+<div class="container" style="text-align:center;">
+    <div class="post-wrap img">
+        <img src="me.jpeg" alt="drawing" height="250" />
+    </div>
+    <div class="post-wrap info">
+        <p style="vertical-align: middle">Nisarg Thakkar</p>
+        <p><em>I‘m a currently pursuing Information Technology(IT) from Charusat University.</em></p>
+        <a class="email" href="mailto:itsthakkarnisarg@gmail.com">E-mail</a> |
+        <a class="linkedin" href="https://www.linkedin.com/in/nisarg-thakkar-08811a21a/" target="_blank" rel="noopener">LinkedIn</a> |
+        <a class="github" href="https://github.com/Nishu0" target="_blank" rel="noopener">GitHub</a>
+        <p>Should you need any further information, please do not hesitate to contact me.</p>
+    </div>
+
+</div>
+
+<!-- <div class="post-wrap divide" style="text-align:center;">
+    <p>Contact me if you need a complete résumé!</p>
+</div> -->
+
+<div class="container">
+	
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">⇲ Expand all</a>
+        <a onclick="go_top()">↑ Back to top</a>
+        <a onclick="go_bottom()">↓ Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "⇱ Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "⇲ Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+
+    
+    <article class="post-wrap page">
+        <section class="post-content">
+            <h2 id="Education"><a href="#Education" class="headerlink" title="Education"></a>Education</h2><blockquote>
+<p><strong>Devang Patel Institute of Advance Technology and Research</strong>, Anand,2020-2024<br>Pursuing B.Tech. in Information Technology Engineering</p>
+</blockquote>
+<blockquote>
+<p><strong>St. Xavier's High School Loyola Hall</strong>, Ahmedabad Naranpura,2018-2020<br>Higher Secondary</p>
+</blockquote>
+<h2 id="Skills"><a href="#Skills" class="headerlink" title="Skills"></a>Skills</h2><p><strong>Programming Language</strong>: C, C++, Java, Python, Html, CSS, Javascript, Markdown<br><strong>Tool</strong>: Git, Linux<br><strong>Interests</strong>: DSA, Java software design, AI</p>
+
+<h2 id="Projects"><a href="#Projects" class="headerlink" title="Projects"></a>Projects</h2>
+        </section>
+    </article>
+</div>
+
+
+<div class="post-wrap page" style="text-align:center;">
+
+    <div class="post-wrap card">
+        <div class="title">
+            Book Inventary System
+        </div>
+        <div class="text"> Simple project where the system maintains the inventory of books in a bookshop. If a customer purchases a book, the book's count will decrease; if a book is added, the same is updated.
+        </div>
+        <div class="link"><a class="link2" href="/......./">Click for More</a></div>
+    </div>
+
+    <div class="post-wrap card">
+        <div class="title">
+            Snake Game Using Python(Pygame module)
+        </div>
+        <div class="text"> Snake was an incredibly popular game, mostly remembered from the 1990s era cell phones. For many people, it was the only game on their phone at that time. In the most basic form, it's a super simple game, but still strangely entertaining.
+        </div>
+        <div class="link"><a class="link2" href="/......./">Click for More</a></div>
+    </div>
+
+    <div class="post-wrap card">
+        <div class="title">
+            Retro Pong Game Using Python(Pygame module)
+        </div>
+        <div class="text"> Pong is one of the earliest arcade video games, first released in 1972 by Atari. It is a two-player game based on table tennis. The game features simple 2D graphics. It consists of two paddles used to return a bouncing ball back and forth across the screen. 
+        </div>
+        <div class="link"><a class="link2" href="/......./">Click for More</a></div>
+    </div>
+
+    
+</div>
+<br>
+<br>
+<br>
+
+
+        </div>
+        <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© Nisarg Thakkar</span>
+    </div>
+</footer>
+
+    </div>
+</body>
+</html>
